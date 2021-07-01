@@ -38,7 +38,7 @@ public class Order {
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "order")
     @PrimaryKeyJoinColumn
     private Delivery delivery;
-
+  
     @PrePersist
     private void orderCheck(){
         if( productId == null ){
